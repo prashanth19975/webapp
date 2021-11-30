@@ -52,10 +52,10 @@
 		</plugins>
 	</build>
 	<distributionManagement>
-   <snapshots>
+   <snapshotRepository>
      <id>deploymentRepo</id>
      <name>snapshots</name>
      <url>http://3.140.248.104:8081/repository/maven-snapshots/</url>
-   </snapshots>
+   </snapshotRepository>
   </distributionManagement>
 </project>
