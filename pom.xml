@@ -51,16 +51,16 @@
 			</plugin>
 		</plugins>
 	</build>
-	<distributionManagement>
-  <releaseRepository>
-     <id>deploymentRepo</id>
-     <name>Releases</name>
-     <url>http://3.140.248.104:8081/repository/maven-releases/</url>
-   </releaseRepository>
+  <distributionManagement>
    <snapshotRepository>
      <id>deploymentRepo</id>
      <name>snapshots</name>
      <url>http://3.140.248.104:8081/repository/maven-snapshots/</url>
    </snapshotRepository>
+   <releaseRepository>
+     <id>deploymentRepo</id>
+     <name>Releases</name>
+     <url>http://3.140.248.104:8081/repository/maven-releases/</url>
+   </releaseRepository>		
   </distributionManagement>
 </project>
