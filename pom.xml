@@ -51,4 +51,16 @@
 			</plugin>
 		</plugins>
 	</build>
+	<distributionManagement>
+  <repository>
+     <id>deploymentRepo</id>
+     <name>Releases</name>
+     <url>http://3.140.248.104:8081/repository/Mavenproject/</url>
+   </repository>
+   <snapshotRepository>
+     <id>deploymentRepo</id>
+     <name>snapshots</name>
+     <url>http://3.140.248.104:8081/repository/Mavenproject/</url>
+   </snapshotRepository>
+  </distributionManagement>
 </project>
