@@ -115,13 +115,12 @@ under the License.
      |
      | NOTE: You should either specify username/password OR privateKey/passphrase, since these pairings are
      |       used together.
-     |
+     |-->
     <server>
-      <id>deploymentRepo</id>
-      <username>repouser</username>
-      <password>repopwd</password>
+      <id>deployment</id>
+      <username>admin</username>
+      <password>admin123</password>
     </server>
-    -->
 
     <!-- Another sample, using keys to authenticate.
     <server>
