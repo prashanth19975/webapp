@@ -4,7 +4,7 @@
 
 	<groupId>com.github.Premvikash</groupId>
 	<artifactId>Example</artifactId>
-	<version>0.0.11-SNAPSHOT</version>
+	<version>12.0-SNAPSHOT</version>
 	<name>Example</name>
 	<packaging>war</packaging>
 	<url>https://github.com/Premvikash/</url>
@@ -55,7 +55,7 @@
    <snapshotRepository>
      <id>deploymentRepo</id>
      <name>snapshots</name>
-     <url>http://18.224.51.48:8081/repository/maven-snapshots/</url>
+     <url>http://18.224.30.237:8081/repository/maven-project/</url>
    </snapshotRepository>	
   </distributionManagement>
 </project>
