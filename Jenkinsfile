@@ -36,11 +36,11 @@ pipeline {
 			    sh 'mvn package'
 				}
 				}
-	        stage('maven deploy') {
+	       stage('maven deploy') {
             steps {	 
-			    sh 'mvn deploy'
+			    sh  "deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://3.17.203.168:9090/')], contextPath: 'webapp_project', war: '**/*.war'"
 				}
-				}
+				}     
 	}
 
 }	
