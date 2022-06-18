@@ -11,7 +11,7 @@ pipeline {
 			    sh 'mvn --version'
 				}
 				}
-	    stage('maven clean') {
+	        stage('maven clean') {
             steps {	 
 			    sh 'mvn clean'
 				}
@@ -26,7 +26,7 @@ pipeline {
 			    sh 'mvn compile'
 				}
 				}		
-		stage('maven test') {
+		stage('maven test')    {
             steps {	 
 			    sh 'mvn test'
 				}
@@ -36,11 +36,7 @@ pipeline {
 			    sh 'mvn package'
 				}
 				}
-	       stage('maven deploy') {
-            steps {	 
-			    deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://3.17.203.168:9090/')], contextPath: 'webapp_project', war: '**/*.war'
-				}
-				}     
+	         
 	}
 
 }	
