@@ -1,15 +1,14 @@
-# FROM tomcat:8.0.20-jre8
-# COPY target/Example-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/sample.war
+FROM ubuntu:latest
 
-FROM centos:latest
+MAINTAINER <chindam75@gmail.com>
 
 WORKDIR /usr/apps/hello-docker/
 
-RUN yum update -y
+RUN apt-get -y update
 
-RUN yum install nodejs -y
+RUN apt-get install -y nodejs
 
-RUN yum install install  npm -y
+RUN apt-get install -y npm
 
 #RUN ln -s /usr/bin/nodejs /usr/bin/node........;;;;;
 
