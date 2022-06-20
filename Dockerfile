@@ -4,8 +4,6 @@ MAINTAINER web <chindam75@gmail.com>
 
 WORKDIR /usr/apps/hello-docker/
 
-RUN  yum update -y
-
 RUN yum install install -y nodejs
 
 RUN yum install install -y npm
