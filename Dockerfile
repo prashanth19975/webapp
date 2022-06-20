@@ -1,14 +1,14 @@
-FROM ubuntu:latest
+FROM centos:latest
 
 MAINTAINER web <chindam75@gmail.com>
 
 WORKDIR /usr/apps/hello-docker/
 
-RUN apt-get -y update
+RUN  yum update -y
 
-RUN apt-get install -y nodejs
+RUN yum install install -y nodejs
 
-RUN apt-get install -y npm
+RUN yum install install -y npm
 
 #RUN ln -s /usr/bin/nodejs /usr/bin/node........;;;;;
 
