@@ -38,7 +38,9 @@ pipeline {
 				}
 				}
 	        stage("Build Dokcer Image") {
+			steps {		
                             sh "docker build -t prashanth19975/java-web-app:${buildNumber} ."
 		                }
+		}
             }
 }	
