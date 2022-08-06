@@ -1,5 +1,6 @@
-pipeline {
+pipeline {	
     agent any
+    def buildNumber = BUILD_NUMBER
     stages {
         stage('git clone') {
             steps {
@@ -36,7 +37,10 @@ pipeline {
 			    sh 'mvn package'
 				}
 				}
-	         
+	        stage ("BuildDocker image"){
+                            sh "docker build -t prashanth19975/java-web-app:${buildNumber} ."  
+		                }
+                                }
 	}
 
 }	
