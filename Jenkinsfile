@@ -1,5 +1,5 @@
-pipeline {
-    def buildNumber = BUILD_NUMBER	
+def buildNumber = BUILD_NUMBER
+pipeline {	
     agent any
     stages {
         stage('git clone') {
