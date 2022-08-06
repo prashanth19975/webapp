@@ -41,6 +41,5 @@ pipeline {
                             sh "docker build -t prashanth19975/java-web-app:${buildNumber} ."  
 		                }
                                 }
-         }
-
+          }
 }	
