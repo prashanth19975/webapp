@@ -39,7 +39,7 @@ pipeline {
 				}
 	        stage("Build Dokcer Image") {
 			steps {		
-                            sh "docker build -t prashanth19975/web.war:${buildNumber} ."
+                            sh "docker build -t prashanth19975/pipeline:${buildNumber} ."
 		                }
 		}
             }
