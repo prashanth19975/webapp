@@ -1,6 +1,6 @@
 FROM tomcat:8.0.20-jre8
 # Dummy text to test 
-COPY /job/project1/56/execution/node/3/ws/target/*.war /usr/local/tomcat/webapps/java-web-app.war
+COPY target/*.war / 
 #FROM ubuntu:latest
 
 #MAINTAINER ybmsr <ybmadhu404@gmail.com>
