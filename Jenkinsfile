@@ -53,8 +53,8 @@ pipeline {
 		stage("Deploy application using docker container in docker"){
 	    steps {
 			sshagent(['DOCKER_DEV_SSH']) {
-			    sh "ssh -o strictHostkey=no root@35.154.138.109"
-			    sh "ssh -o strictHostkey=no root@35.154.138.109 docker run -d -p 8080:8080 --name myproject1container --image prashanth19975/pipeline:${buildNumber}"
+			    sh "ssh -o strictHostkeyChecking=no root@35.154.138.109"
+			    sh "ssh -o strictHostkeyChecking=no root@35.154.138.109 docker run -d -p 8080:8080 --name myproject1container --image prashanth19975/pipeline:${buildNumber}"
 			       }
 	                       }
 		}
