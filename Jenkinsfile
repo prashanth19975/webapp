@@ -56,6 +56,7 @@ pipeline {
 			    sh "ssh -o strictHostkey=no root@35.154.138.109 docker run -d -p 8080:8080 --name myproject1container --image prashanth19975/pipeline:${buildNumber}"
 			       }
 	                       }
+		               }
 		}
             }
 }	
