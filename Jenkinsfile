@@ -49,6 +49,7 @@ pipeline {
                             sh "docker push prashanth19975/pipeline:${buildNumber} "
 			        }
 		                }	
+		                }
 		stage("Deploy application using docker container in docker"){
 	    steps {
 			sshagent(['DOCKER_DEV_SSH']) {
