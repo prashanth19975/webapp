@@ -1,3 +1,4 @@
+
 def buildNumber = BUILD_NUMBER
 pipeline {	
     agent any
@@ -41,6 +42,15 @@ pipeline {
 			steps {		
                             sh "docker build -t prashanth19975/pipeline:${buildNumber} ."
 		                }
+		stage("Push docker image") {
+			steps {
+			         withCredentials([string(credentialsId: 'prashanth19975', variable: 'dockerhubpwd')]) {
+					 sh "docker login -u prashanth19975 -p ${dockerhubpwd}"		 
+                                         sh "docker push  prashanth19975/tomcat "
+                                }
+			        }
 		}
             }
 }	
+	        		
+   	
