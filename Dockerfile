@@ -1,6 +1,6 @@
 FROM tomcat:8.0.20-jre8
 # Dummy text to test 
-COPY target/*.war / 
+COPY target/*.war  /usr/local/tomcat/webapps/pipeline.war
 #FROM ubuntu:latest
 
 #MAINTAINER ybmsr <ybmadhu404@gmail.com>
