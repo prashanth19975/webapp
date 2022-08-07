@@ -49,6 +49,7 @@ pipeline {
                                          sh "docker push  prashanth19975/tomcat "
                                 }
 			        }
+		                }
 		}
             }
 }	
