@@ -12,31 +12,11 @@ pipeline {
 			    sh 'mvn --version'
 				}
 				}
-	        stage('maven clean') {
+	        stage('maven clean compile package') {
             steps {	 
-			    sh 'mvn clean'
+			    sh 'mvn clean compile package'
 				}
 				}			
-		stage('maven validate') {
-            steps {	 
-			    sh 'mvn validate'
-				}
-				}				
-		stage('maven compile') {
-            steps {	 
-			    sh 'mvn compile'
-				}
-				}		
-		stage('maven test')    {
-            steps {	 
-			    sh 'mvn test'
-				}
-				}		
-                stage('maven package') {
-            steps {	 
-			    sh 'mvn package'
-				}
-				}
 	        stage("Build Dokcer Image") {
 	    steps {		
                             sh "docker build -t prashanth19975/tomcat:${buildNumber} ."
