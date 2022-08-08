@@ -34,7 +34,7 @@ pipeline {
 	    steps {
 			sshagent(['DOCKER_DEV_SSH']) {
 			    sh "ssh -o strictHostkeyChecking=no ec2-user@13.234.34.189"
-			    sh "ssh -o strictHostkeyChecking=no ec2-user@13.234.34.189 docker run -itd -p 8082:8080 --name tomcatcontainer prashanth19975/tomcat:${buildNumber}"
+			    sh "ssh -o strictHostkeyChecking=no ec2-user@13.234.34.189 docker run -itd -p 8082:8080 --name tomcatcontainer1 prashanth19975/tomcat:${buildNumber}"
 			       }
 	                       }
 		}
