@@ -7,14 +7,14 @@ pipeline {
                   checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/prashanth19975/webapp.git']]])
              }
              }
-          stage ('maven version') {
+          stage ('mvn version') {
               steps {
-                   sh 'maven --version'
+                   sh 'mvn --version'
              }
              }
-	      stage ('maven clean compile test package') {
+	      stage ('mvn clean compile test package') {
                steps {
-                    sh 'maven clean compile test package'
+                    sh 'mvn clean compile test package'
               }
               }
         }
