@@ -12,7 +12,7 @@ pipeline {
                    sh 'maven --version'
              }
              }
-           stage ('maven clean compile test package')
+	      stage ('maven clean compile test package') {
                steps {
                     sh 'maven clean compile test package'
               }
