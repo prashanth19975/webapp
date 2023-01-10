@@ -1,0 +1,28 @@
+node{
+    def BuildNumber=BUILD_NUMBER
+    stage("Git clone"){
+       git 'https://github.com/prashanth19975/webapp.git'
+    }
+    stage("maven clean compile test package"){
+        sh "mvn clean compile test package"
+    }
+    stage("Build docker image"){
+        sh "docker build -t prashanth19975/java-webapp-docker:${BuildNumber} ."
+    }
+    stage("Docker login and push"){
+        withCredentials([string(credentialsId: 'docker_hub_pwd', variable: 'docker_hub_pwd')]){ 
+            sh "docker login -u prashanth19975 -p ${docker_hub_pwd}"
+    }
+    
+            sh "docker push prashanth19975/java-webapp-docker:${BuildNumber}"
+            
+          }
+    stage("Deploying application as docker container") {
+        sshagent(['DOCKER-DEV-SERVER-SSH']) {
+            sh "ssh -o strictHostkeychecking=no ec2-user@172.31.7.158 docker rm -f javawebappcontainer || true"
+            sh "ssh -o strictHostkeychecking=no ec2-user@172.31.7.158 docker run -d -p 8080:8080 --name javawebappcontainer prashanth19975/java-webapp-docker:${BuildNumber}"
+        }
+    }     
+          
+    
+}
