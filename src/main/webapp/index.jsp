@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Static Website</title>
+    <title>HELLO WELCOME TO JENKINS PIPELINE SESSIONS </title>
   </head>
   <body>
-    <h1>My Static Website</h1>
+    <h1>My HELLO WELCOME TO JENKINS PIPELINE SESSIONS</h1>
     <p>
-      Hello, I'm online, and everyone can see me!
+      Hello, SOMESH I'm online, and everyone can see me!
     </p>
   </body>
 </html>
