@@ -22,12 +22,8 @@ pipeline {
                   sh "mvn deploy"
 		  }
 	          }   
-	    /*  stage ("deploy to tomcat") {
-                 steps {
-	            deploy adapters: [tomcat9(credentialsId: 'TOMCAT', path: '', url: 'http://65.2.35.118:8080/')], contextPath: 'feb1-pipeline', war: '**/*.war' 
-		 }
-	        }
-*/
+	
+
       }
 }	
 	
